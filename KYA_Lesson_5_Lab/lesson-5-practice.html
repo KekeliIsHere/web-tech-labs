@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Student Registration Portal</title>
+</head>
+<body>
+  <header>
+    <h1>Welcome to the Ashesi Student Registration Portal</h1>
+    <p>Please fill out the form below to register.</p>
+  </header>
+
+  <main>
+    <form>
+      <fieldset>
+        <legend>Personal Information</legend>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required minlength="2"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="photo">Upload Photo:</label>
+        <input type="file" id="photo" name="photo" accept="image/*">
+      </fieldset>
+
+      <fieldset>
+        <legend>Program Selection</legend>
+        <input type="radio" id="cs" name="program" value="Computer Science" required>
+        <label for="cs">Computer Science</label><br>
+
+        <input type="radio" id="bus" name="program" value="Business">
+        <label for="biz">Business</label><br>
+
+        <input type="radio" id="ceng" name="program" value="Computer Engineering">
+        <label for="ceng">Computer Engineering</label><br>
+
+        <input type="radio" id="econs" name="program" value="Economics">
+        <label for="arts">Economics</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Interests</legend>
+        <input type="checkbox" id="photoClub" name="interests" value="Photography">
+        <label for="photoClub">Photography</label><br>
+
+        <input type="checkbox" id="ai" name="interests" value="AI">
+        <label for="ai">Artificial Intelligence</label><br>
+
+        <input type="checkbox" id="design" name="interests" value="Design">
+        <label for="design">Design</label>
+      </fieldset>
+
+      <label for="year">Year of Study:</label>
+      <select id="year" name="year">
+        <option value="1">Freshman</option>
+        <option value="2">Sophmore</option>
+        <option value="3">Junior</option>
+        <option value="4">Senior</option>
+      </select><br><br>
+
+      
+      <label for="bio">Tell us about yourself:</label><br>
+      <textarea id="bio" name="bio" rows="4" cols="40" oninput="count.value=bio.value.length"></textarea>
+      <output name="count">0</output> characters<br><br>
+
+      
+      <button type="submit">Submit Registration</button>
+      <button type="submit" formnovalidate>Submit Without Validation</button>
+    </form>
+
+    <dialog id="feedbackDialog">
+      <form method="dialog">
+        <p>Rate your experience:</p>
+        <input type="radio" name="rating" value="Good"> Good<br>
+        <input type="radio" name="rating" value="Average"> Average<br>
+        <input type="radio" name="rating" value="Poor"> Poor<br><br>
+        <button type="submit">Close</button>
+      </form>
+    </dialog>
+    <button onclick="document.getElementById('feedbackDialog').showModal()">Open Feedback</button>
+  </main>
+
+  <footer>
+    <p>&copy; Kekeli Yao Agblobi Projects</p>
+  </footer>
+</body>
+</html>

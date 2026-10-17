@@ -1,9 +1,7 @@
 <?php
 /*
  * Name: Kekeli Yao Agblobi
- * Date: 16 October 2026
- * Course: CS341 - Web Technologies
- * Lesson 12 Lab
+ * Date: 17 October 2026
  */
 
 // Step 1 Comment: The static HTML file sends fixed, pre-written text, whereas index.php is processed by the PHP engine on the server upon every request, generating dynamic output (like current server time) before streaming HTML to the client.
@@ -37,8 +35,8 @@ $subtotal = ($order[0][1] * $order[0][2]) + ($order[1][1] * $order[1][2]);
 
 // Calculate total with += GHS 5 service charge and tax
 $total = $subtotal;
-$total += 5; // Service charge
-$total += ($total * TAX_RATE); // Tax
+$total += 5; 
+$total += ($total * TAX_RATE); 
 
 // Build receipt string with .=
 $receipt = "";
